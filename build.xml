@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<!-- build file for OCERA CanMonitor -->
+
+<project name="canmon" default="default" basedir=".">
+
+    <property name="src" location="src"/>
+    <property name="class" location="${java_class_dir}class"/>
+    <property name="lib"  location="${java_lib_dir}lib"/>
+    <property name="jar.jdom"  location="lib/jdom.jar"/>
+    <property name="jar.ui"  location="lib/ui.jar"/>
+    <property name="path.monitor" value="ocera/rtcan/monitor"/>
+    <property name="path.xmlconf" value="ocera/xmlconf"/>
+    <property name="path.cpickle" value="org/flib/net"/>
+
+    <target name="default" depends="cpickle, xmlconf, canmonitor">
+    </target>
+
+    <target name="canmonitor" depends="jar-monitor">
+    </target>
+
+    <target name="xmlconf" depends="jar-xmlconf">
+    </target>
+
+    <target name="cpickle" depends="jar-cpickle">
+    </target>
+
+    <target name="prepare-compile">
+         <mkdir dir="${class}"/>
+         <mkdir dir="${lib}"/>
+     </target>
+
+    <target name="compile" depends="compile-monitor, compile-xmlconf">
+        <!--
+        <javac srcdir="${src}" destdir="${class}"
+            classpath="${jar.jdom}"
+            debug="true"
+            optimize="false"
+            includes="ocera/**/*.java"
+            />
+          -->
+    </target>
+
+    <target name="compile-monitor" depends="prepare-compile">
+        <mkdir dir="${class}/${path.monitor}/resources"/>
+        <!-- Copy the toolbar icons images -->
+        <copy todir="${class}/${path.monitor}/resources">
+            <fileset dir="${src}/${path.monitor}/resources" >
+                <include name="*.gif"/>
+                <include name="*.png"/>
+                <include name="*.conf.xml"/>
+                <include name="menu.xml"/>
+                <include name="*.properties"/>
+            </fileset>
+        </copy>
+        <!-- Copy the XmlConfPanel icons images -->
+        <copy todir="${class}/${path.xmlconf}/resources">
+            <fileset dir="${src}/${path.xmlconf}/resources" >
+                <include name="*.gif"/>
+                <include name="*.png"/>
+            </fileset>
+        </copy>
+        <javac srcdir="${src}" destdir="${class}"
+            classpath="${jar.jdom}:${jar.ui}"
+            source="1.4"
+            debug="true"
+            optimize="false"
+            includes="${path.monitor}/CanMonitor.java"
+            />
+    </target>
+
+    <!-- Generate the jar file -->
+    <target name="copy-libs">
+        <mkdir dir="${lib}"/>
+        <!-- Copy the toolbar icons images -->
+        <copy todir="${lib}">
+            <fileset dir="lib" >
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="jar-monitor" depends="compile-monitor, copy-libs">
+        <!-- <unjar dest="${class}" src="${lib}/jdom.jar"/> -->
+        <jar jarfile="${lib}/canmonitor.jar" basedir="${class}"
+            manifest="${src}/${path.monitor}/manifest">
+            <!-- Do not include test files in the runtime jar
+            <exclude name="**/Test*.*"/>
+            <exclude name="**/test*.*"/>
+            -->
+        </jar>
+        <copy todir="${java_lib_dir}" file="canmonitor"/>
+	    <chmod file="${java_lib_dir}/canmonitor" perm="a+x"/>
+    </target>
+
+    <target name="compile-xmlconf" depends="prepare-compile">
+        <mkdir dir="${class}/${path.xmlconf}/resources"/>
+        <!-- Copy the toolbar icons images -->
+        <copy todir="${class}/${path.xmlconf}/resources">
+            <fileset dir="${src}/${path.xmlconf}/resources" >
+                <include name="*.gif"/>
+                <include name="*.png"/>
+                <include name="*.conf.xml"/>
+            </fileset>
+        </copy>
+        <javac srcdir="${src}" destdir="${class}"
+            classpath="${jar.jdom}"
+            debug="true"
+            optimize="false"
+            includes="${path.xmlconf}/XmlConf.java"
+            />
+    </target>
+
+    <target name="compile-cpickle" depends="prepare-compile">
+        <mkdir dir="${class}/${path.cpickle}/resources"/>
+        <javac srcdir="${src}" destdir="${class}"
+            debug="true"
+            optimize="false"
+            source="1.4"
+            includes="${path.cpickle}/CPickle.java"
+            />
+    </target>
+
+    <!-- Generate the jar file -->
+    <target name="jar-xmlconf" depends="compile-xmlconf, copy-libs">
+        <!-- <unjar dest="${class}" src="${lib}/jdom.jar"/> -->
+        <jar jarfile="${lib}/xmlconf.jar" basedir="${class}"
+            manifest="${src}/${path.xmlconf}/manifest">
+        </jar>
+    </target>
+
+    <target name="jar-cpickle" depends="compile-cpickle">
+        <!-- <unjar dest="${class}" src="${lib}/jdom.jar"/> -->
+        <jar jarfile="${lib}/cpickle.jar" basedir="${class}"
+            manifest="${src}/${path.cpickle}/manifest">
+        </jar>
+	<!-- 
+        <copy todir="${java_lib_dir}" file="cpickle-canmsgs"/>
+        <chmod file="${java_lib_dir}/cpickle-canmsgs" perm="a+x"/>
+	-->
+    </target>
+
+    <target name="run"  depends="jar-monitor">
+        <exec dir="." executable="canmonitor" os="Linux"/>
+    </target>
+
+    <target name="clean" >
+        <delete quiet="true" includeEmptyDirs="true">
+<!--            <fileset dir="${class}" includes="**/*.class" defaultexcludes="no"/>-->
+            <fileset dir="${class}"/>
+        </delete>
+        <delete quiet="true">
+            <fileset dir="${lib}" includes="*.jar" excludes="jdom*, ui.jar" defaultexcludes="no"/>
+        </delete>
+    </target>
+
+</project>
+

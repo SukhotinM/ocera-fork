@@ -1,0 +1,10 @@
+To make CanMonitor: ./make.ant
+To run CanMonitor:  ./make.ant run   or  ./canmonitor
+
+! don forget to set variables JAVA_HOME and ANT in make.ant to 
+  reflect your locale settings.
+  
+  enjoy 
+  
+  Frantisek Vacek
+  vacek@rtime.felk.cvut.cz

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ocera.rtcan.monitor.CanMonStatusBar">
+  <grid id="50574" binding="panel" row-count="1" column-count="3" hgap="5" vgap="0">
+    <margin top="1" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="216" y="288" width="250" height="25"/>
+      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3"/>
+    </constraints>
+    <properties>
+      <enabled value="false"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="88a6b" row-count="1" column-count="1" hgap="-1" vgap="0">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <xy x="0" y="1" width="140" height="24"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="3"/>
+        </constraints>
+        <properties/>
+        <border type="etched"/>
+        <children>
+          <component id="85331" class="javax.swing.JLabel" binding="lbl1">
+            <constraints>
+              <xy x="2" y="3" width="25" height="17"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+            </constraints>
+            <properties>
+              <iconTextGap value="0"/>
+              <text value="ahoj"/>
+              <verticalAlignment value="1"/>
+              <verticalTextPosition value="1"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="d9fa2" row-count="1" column-count="1" hgap="-1" vgap="0">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <xy x="145" y="1" width="50" height="24"/>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3">
+            <preferred-size width="50" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="etched"/>
+        <children>
+          <component id="1c44d" class="javax.swing.JLabel" binding="lbl2">
+            <constraints>
+              <xy x="2" y="3" width="22" height="17"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+            </constraints>
+            <properties>
+              <iconTextGap value="0"/>
+              <text value="lbl2"/>
+              <verticalAlignment value="1"/>
+              <verticalTextPosition value="1"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="5d01b" row-count="1" column-count="1" hgap="-1" vgap="0">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <xy x="200" y="1" width="50" height="24"/>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3">
+            <preferred-size width="50" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="etched"/>
+        <children>
+          <component id="fd50b" class="javax.swing.JLabel" binding="lbl3">
+            <constraints>
+              <xy x="2" y="3" width="22" height="17"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+            </constraints>
+            <properties>
+              <horizontalTextPosition value="2"/>
+              <iconTextGap value="0"/>
+              <text value="lbl3"/>
+              <verticalAlignment value="1"/>
+              <verticalTextPosition value="1"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

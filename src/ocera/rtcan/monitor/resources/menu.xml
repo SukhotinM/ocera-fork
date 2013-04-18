@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<xml>
+    <head>
+        <link role="stringprops" href="/ocera/rtcan/monitor/resources/MenuLabels.properties"/>
+    </head>
+    <body>
+        <actionmap>
+            <action caption="Open EDS" id="EdsOpen" icon="resources/file-open.png"
+                tooltip="Open EDS in new tab" accelerator="control O" mnemonic="O"/>
+            <action caption="Close EDS" id="EdsClose" icon="resources/eds-close.png"
+                tooltip="Close current EDS tab" accelerator="control W" mnemonic="C"/>
+            <action caption="Connect" id="Connect" tooltip="Connect to canmond server" mnemonic="N"/>
+            <action caption="Disconnect" id="Disconnect" tooltip="Disconnect from canmond server" mnemonic="D"/>
+            <action id="Config" caption="Config" tooltip="Open configuration window" mnemonic="C"/>
+            <action id="DevicesReset" caption="Reset devices" tooltip="Reset all devices in network" mnemonic="R"/>
+            <action id="Quit" caption="Quit" tooltip="Exit application" mnemonic="Q"/>
+        </actionmap>
+        <menubar>
+            <menu caption="File" mnemonic="F">
+                <menuitem action_id="EdsOpen"/>
+                <menuitem action_id="EdsClose"/>
+                <separator/>
+                <menuitem action_id="Connect"/>
+                <menuitem action_id="Disconnect"/>
+<!--
+                <menu caption="Tools" mnemonic="T">
+                    <menuitem action_id="Config"/>
+                    <separator/>
+                    <menuitem action_id="DevicesReset"/>
+                </menu>
+-->
+                <separator/>
+                <menuitem action_id="Quit"/>
+            </menu>
+            <menu caption="Tools" mnemonic="T">
+                <menuitem action_id="Config"/>
+                <separator/>
+                <menuitem action_id="DevicesReset"/>
+<!--                <menuitem action="DeviceStatePreoperational"/>-->
+            </menu>
+        </menubar>
+        <toolbar>
+            <button action_id="EdsOpen"/>
+            <button action_id="EdsClose"/>
+            <separator/>
+            <button action_id="Quit"/>
+        </toolbar>
+    </body>
+</xml>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-2"?>
+<config version="0.0.1">
+  <macros hidden="yes" />
+  <data help="Version of CanMonitor configuration file" readonly="yes">
+    <connection caption="canmond">
+      <host value="localhost" default="localhost"/>
+      <port value="10001" default="10001"/>
+    </connection>
+      <logging caption="Logging">
+          <logscreensize caption="Log length on screen" value="1000" default="1000" help="How many chars will be maximaly displayed on JTextArea log components."/>
+      </logging>
+    <canopen caption="CANopen">
+      <node value="1" default="1" help="Number of CANopen device to communicate with."/>
+    </canopen>
+  </data>
+</config>
+

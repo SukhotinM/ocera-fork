@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ocera.rtcan.monitor.CANopenDevicePanel">
+  <tabbedpane id="e7523" binding="pane">
+    <constraints>
+      <xy x="14" y="44" width="576" height="222"/>
+      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0"/>
+    </constraints>
+    <properties>
+      <tabLayoutPolicy value="0"/>
+      <tabPlacement value="3"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="b0707" row-count="1" column-count="1" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <tabbedpane title="OD"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <splitpane id="e5b97">
+            <constraints>
+              <xy x="0" y="0" width="571" height="194"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+                <preferred-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <dividerLocation value="164"/>
+              <dividerSize value="8"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="44b2a" row-count="1" column-count="1" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <splitpane position="right"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="c10c1" row-count="2" column-count="1" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <xy x="0" y="0" width="399" height="194"/>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <grid id="72fd0" row-count="1" column-count="6" hgap="5" vgap="-1">
+                        <margin top="2" left="3" bottom="0" right="3"/>
+                        <constraints>
+                          <xy x="0" y="0" width="399" height="27"/>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="8717d" class="javax.swing.JTextField" binding="edSDO">
+                            <constraints>
+                              <xy x="3" y="3" width="164" height="22"/>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="8" fill="1"/>
+                            </constraints>
+                            <properties/>
+                          </component>
+                          <component id="e3ee8" class="javax.swing.JButton" binding="btUploadSDO">
+                            <constraints>
+                              <xy x="172" y="2" width="57" height="25"/>
+                              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1"/>
+                            </constraints>
+                            <properties>
+                              <margin top="2" left="5" bottom="2" right="5"/>
+                              <text value="&amp;Upload"/>
+                            </properties>
+                          </component>
+                          <component id="aa49c" class="javax.swing.JButton" binding="btDownloadSDO">
+                            <constraints>
+                              <xy x="234" y="2" width="73" height="25"/>
+                              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1"/>
+                            </constraints>
+                            <properties>
+                              <margin top="2" left="5" bottom="2" right="5"/>
+                              <text value="&amp;Download"/>
+                            </properties>
+                          </component>
+                          <component id="1a9ea" class="javax.swing.JLabel">
+                            <constraints>
+                              <xy x="342" y="7" width="29" height="15"/>
+                              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+                            </constraints>
+                            <properties>
+                              <text value="node"/>
+                            </properties>
+                          </component>
+                          <component id="31430" class="javax.swing.JTextField" binding="edNodeID">
+                            <constraints>
+                              <xy x="376" y="3" width="20" height="22"/>
+                              <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1">
+                                <preferred-size width="20" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                          <hspacer id="cf0fd">
+                            <constraints>
+                              <xy x="312" y="9" width="30" height="11"/>
+                              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1">
+                                <preferred-size width="30" height="-1"/>
+                              </grid>
+                            </constraints>
+                          </hspacer>
+                        </children>
+                      </grid>
+                      <scrollpane id="edae9">
+                        <constraints>
+                          <xy x="0" y="32" width="399" height="162"/>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="82867" class="javax.swing.JTable" binding="tblProp">
+                            <constraints/>
+                            <properties/>
+                          </component>
+                        </children>
+                      </scrollpane>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+              <scrollpane id="28bef">
+                <constraints>
+                  <splitpane position="left"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="a15d0" class="javax.swing.JTree" binding="treeEds">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                </children>
+              </scrollpane>
+            </children>
+          </splitpane>
+        </children>
+      </grid>
+      <grid id="85a8d" row-count="1" column-count="1" hgap="-1" vgap="-1">
+        <margin top="3" left="5" bottom="3" right="5"/>
+        <constraints>
+          <tabbedpane title="Log"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="f94e" row-count="2" column-count="1" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <xy x="5" y="3" width="561" height="188"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <scrollpane id="d094e">
+                <constraints>
+                  <xy x="0" y="0" width="561" height="158"/>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="b927a" class="javax.swing.JTextArea" binding="txtLog">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                </children>
+              </scrollpane>
+              <grid id="eb582" row-count="1" column-count="2" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <xy x="0" y="163" width="561" height="25"/>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="a4fa6" class="javax.swing.JButton" binding="btClearLog">
+                    <constraints>
+                      <xy x="497" y="0" width="64" height="25"/>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1"/>
+                    </constraints>
+                    <properties>
+                      <text value="&amp;Clear"/>
+                    </properties>
+                  </component>
+                  <hspacer id="5fcfe">
+                    <constraints>
+                      <xy x="0" y="7" width="497" height="11"/>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1"/>
+                    </constraints>
+                  </hspacer>
+                </children>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </tabbedpane>
+</form>

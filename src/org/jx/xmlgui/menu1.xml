@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<xml>
+<head>
+  <link role="stringprops" href="MenuLabels.properties"/>
+</head>
+<body>
+  <menubar id="mail.multi_pane" label="MenuBar">
+      <menu id="FileMenu" category="file" label="$multiFileLabel" accel="F">
+        <menuitem id="msgNew" category="file" action="msgNew" label="$msgNewLabel" accel="$msgNewAccel" description=""/>
+        <menuitem id="folderNew" category="file" action="folderNew" label="$folderNewLabel" accel="$folderNewAccel" description=""/>
+        <menuitem id="msgOpen" category="file" action="msgOpen" label="$msgOpenLabel" accel="$msgOpenAccel" description=""/>
+        <menuitem id="msgSaveAs" category="file" action="msgSaveAs" label="$msgSaveAsLabel" accel="$msgSaveAsAccel" description=""/>
+        <menuitem type="separator"/>
+        <menuitem id="msgGetNew" category="file" action="msgGetNew" label="$msgGetNewLabel" accel="$msgGetNewAccel" description=""/>
+        <menuitem type="separator"/>
+          <menuitem id="appExit" category="quit" action="appExit" label="$appExitLabel" accel="$appExitAccel" description=""/>
+      </menu>
+      <menu id="EditMenu" category="edit" label="$multiEditLabel" accel="$multiEditAccel">
+        <menuitem id="editUndo" category="edit" action="editUndo" label="$editUndoLabel" accel="$editUndoAccel" description=""/>
+        <menuitem id="editCut" category="edit" action="editCut" label="$editCutLabel" accel="$editCutAccel" description=""/>
+        <menuitem id="editCopy" category="edit" action="editCopy" label="$editCopyLabel" accel="$editCopyAccel" description=""/>
+        <menuitem id="editPaste" category="edit" action="editPaste" label="$editPasteLabel" accel="$editPasteAccel" description=""/>
+      </menu>
+  </menubar>
+</body>
+</xml>

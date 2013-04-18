@@ -1,0 +1,21 @@
+#!/bin/sh
+
+CANMON_DIR=`dirname $0`
+
+#$JAVA_HOME/bin/java -classpath class:$JAVA_HOME/jre/lib/charsets.jar:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/jre/lib/javaplugin.jar:$JAVA_HOME/jre/lib/jce.jar:$JAVA_HOME/jre/lib/jsse.jar:$JAVA_HOME/jre/lib/sunrsasign.jar:$JAVA_HOME/jre/lib/ext/localedata.jar:$JAVA_HOME/jre/lib/ext/dnsns.jar:$JAVA_HOME/jre/lib/ext/ldapsec.jar:$JAVA_HOME/jre/lib/ext/sunjce_provider.jar ocera.rtcan.monitor.CanMonitor
+
+#if [ -z "$JAVA_HOME" ] ; then
+#  export JAVA_HOME=/opt/java
+#fi
+
+if [ -z "$JAVA_JRE_BIN" ] ; then
+  if [ -n "$JAVA_HOME" ] ; then
+    JAVA_JRE_BIN="$JAVA_HOME/java"
+  else
+    JAVA_JRE_BIN="java"
+  fi
+fi
+
+# -ea - enble assertions
+"$JAVA_JRE_BIN" -ea -jar $CANMON_DIR/lib/canmonitor.jar $@
+#$JAVA_HOME/bin/java -cp lib/jdom.jar:class ocera/rtcan/monitor/CanMonitor $@

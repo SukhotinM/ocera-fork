@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Class-Path: jdom.jar
+Main-Class: ocera.xmlconf.XmlConf
+
+
+
+
+
