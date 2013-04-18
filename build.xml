@@ -7,7 +7,6 @@
     <property name="class" location="${java_class_dir}class"/>
     <property name="lib"  location="${java_lib_dir}lib"/>
     <property name="jar.jdom"  location="lib/jdom.jar"/>
-    <property name="jar.ui"  location="lib/ui.jar"/>
     <property name="path.monitor" value="ocera/rtcan/monitor"/>
     <property name="path.xmlconf" value="ocera/xmlconf"/>
     <property name="path.cpickle" value="org/flib/net"/>
@@ -149,7 +148,7 @@
             <fileset dir="${class}"/>
         </delete>
         <delete quiet="true">
-            <fileset dir="${lib}" includes="*.jar" excludes="jdom*, ui.jar" defaultexcludes="no"/>
+            <fileset dir="${lib}" includes="*.jar" excludes="jdom*" defaultexcludes="no"/>
         </delete>
     </target>
 
